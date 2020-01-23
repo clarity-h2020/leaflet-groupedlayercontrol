@@ -331,7 +331,7 @@ L.Control.GroupedLayers = L.Control.extend({
 
     for (i = 0; i < inputsLen; i++) {
       input = inputs[i];
-      if (input.className === 'leaflet-control-layers-selector') {
+      //if (input.className === 'leaflet-control-layers-selector') {
         obj = this._getLayer(input.layerId);
 
         if (input.checked && !this._map.hasLayer(obj.layer)) {
@@ -339,7 +339,7 @@ L.Control.GroupedLayers = L.Control.extend({
         } else if (!input.checked && this._map.hasLayer(obj.layer)) {
           this._map.removeLayer(obj.layer);
         }
-      }
+      //}
     }
 
     this._handlingClick = false;
